@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,5 +29,8 @@ public class CourseController {
         return ResponseEntity.ok(course);
     }
 
-    
+    @GetMapping("courses")
+    public List<Course> getCourses() {
+        return courses;
+    }
 }
