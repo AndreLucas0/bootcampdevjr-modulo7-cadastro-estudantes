@@ -30,4 +30,9 @@ public class StudentController {
         return ResponseEntity.ok(student);
     }
 
+    @GetMapping("students")
+    public List<Student> getStudents() {
+        return students;
+    }
+
 }
